@@ -1,12 +1,11 @@
-import javafx.scene.layout.Priority;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import javax.swing.*;
+
 import java.util.List;
 
 public class Homepage extends BaseClass{
@@ -22,6 +21,7 @@ public class Homepage extends BaseClass{
         driver.findElement(By.id("twotabsearchtextbox")).sendKeys("iPhone XR (64GB) - Black",Keys.ENTER);
 
         List<WebElement> result=driver.findElements(By.xpath("//div[@class='a-section a-spacing-medium']"));
+        System.out.println(result.size());
 
         for(int i=0;i<result.size();i++){
             String productname=result.get(i).getText();
@@ -29,8 +29,7 @@ public class Homepage extends BaseClass{
                 //String price=driver.findElement(By.xpath("//div[@class='a-section a-spacing-medium']/div[2]/div[2]/div/div[3]/div/div/div/div[2]/a/span/span")).getText();
                 //System.out.println(price);
                 //Thread.sleep(3000);
-
-                       //driver.findElement(By.xpath("//a[@class='a-size-base a-link-normal a-text-normal']")).getText();
+                //driver.findElement(By.xpath("//a[@class='a-size-base a-link-normal a-text-normal']")).getText();
                  amznPrice=driver.findElement(By.xpath("//span[@class='a-price']")).getText();
                  amznPrice=amznPrice.replaceAll("[^a-zA-Z0-9]","");
                 System.out.println("Amazon Price :" + amznPrice);
