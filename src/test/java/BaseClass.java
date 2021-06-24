@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 public class BaseClass {
 
-   protected WebDriver driver;
+   public WebDriver driver;
 
    @BeforeClass
     public void openBrowser(){
@@ -18,8 +18,8 @@ public class BaseClass {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
-   // @AfterClass
-   // public void teardown(){
-   //    driver.quit();
-   // }
+   @AfterClass
+    public void teardown(){
+       driver.quit();
+    }
 }
