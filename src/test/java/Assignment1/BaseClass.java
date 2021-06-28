@@ -20,8 +20,8 @@ public class BaseClass {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
-   //@AfterClass
-  //  public void teardown(){
-   //    driver.quit();
-   // }
+   @AfterClass
+    public void teardown(){
+       driver.quit();
+    }
 }
