@@ -1,3 +1,4 @@
+package Assignment1;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -47,7 +48,7 @@ public class Homepage extends BaseClass{
 
         for(int i=0;i<product.size();i++){
             String name=product.get(i).getText();
-            //System.out.println(name);
+           // System.out.println(name);
             if(name.equalsIgnoreCase("APPLE iPhone XR (Black, 64 GB)")){
                 flipPrice=driver.findElement(By.xpath("//div[@class='_30jeq3 _1_WHN1']")).getText();
                 System.out.println("Flipcart Price : "+flipPrice);

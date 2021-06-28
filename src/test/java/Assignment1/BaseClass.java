@@ -1,3 +1,5 @@
+package Assignment1;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -18,8 +20,8 @@ public class BaseClass {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
-   @AfterClass
-    public void teardown(){
-       driver.quit();
-    }
+   //@AfterClass
+  //  public void teardown(){
+   //    driver.quit();
+   // }
 }
